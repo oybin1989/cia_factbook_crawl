@@ -1,0 +1,7 @@
+Background:
+
+xpath('//h2[@sectiontitle="Introduction"]/../following::*[1]/div[@class="category_data"]/text()').extract()
+
+location
+
+xpath('//h2[@sectiontitle="Geography"]/../following::*[6]')
