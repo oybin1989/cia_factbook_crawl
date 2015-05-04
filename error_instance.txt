@@ -1,0 +1,18 @@
+insert "Countries" "CANADA  "[
+contain government:{"government of CANADA  "[
+     contain "Country name":{"Country name of CANADA  "[
+            contain "local short form":{"local short form of Country name of CANADA   "[@data:"null"]}("Country name of CANADA  ")]
+     }("government of CANADA  ")
+]}("CANADA  ")
+];
+ 
+
+
+
+我是想建立一种类似 Country
+                       -goverment
+                             -country name
+                                  -local short form
+这样的结构。
+ 
+谢谢

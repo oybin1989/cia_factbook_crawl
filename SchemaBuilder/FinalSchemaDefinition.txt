@@ -1,0 +1,1275 @@
+create class Country subsume {"Countries"}[
+contain "government" (inverse belongto):"government",
+contain "transportation" (inverse belongto):"transportation",
+contain "military" (inverse belongto):"military",
+contain "energy" (inverse belongto):"energy",
+contain "geo" (inverse belongto):"geo",
+contain "country" (inverse belongto):"country",
+contain "background" (inverse belongto):"background",
+contain "economy" (inverse belongto):"economy",
+contain "province" (inverse belongto)*:"province",
+contain "author" (inverse belongto):"author",
+contain "communications" (inverse belongto):"communications",
+contain "transnational_issue" (inverse belongto):"transnational_issue",
+contain "PeopleandSociety" (inverse belongto):"PeopleandSociety",
+];
+
+create class "government" [
+contain "Dependent areas" (inverse belongto)*:"Dependent areas",
+contain "Legal system" (inverse belongto)*:"Legal system",
+contain "Country name" (inverse belongto)*:"Country name",
+contain "National anthem" (inverse belongto)*:"National anthem",
+contain "International organization participation" (inverse belongto)*:"International organization participation",
+contain "Constitution" (inverse belongto)*:"Constitution",
+contain "Legislative branch" (inverse belongto)*:"Legislative branch",
+contain "Political parties and leaders" (inverse belongto)*:"Political parties and leaders",
+contain "Executive branch" (inverse belongto)*:"Executive branch",
+contain "Suffrage" (inverse belongto)*:"Suffrage",
+contain "Administrative divisions" (inverse belongto)*:"Administrative divisions",
+contain "Government type" (inverse belongto)*:"Government type",
+contain "Independence" (inverse belongto)*:"Independence",
+contain "International law organization participation" (inverse belongto)*:"International law organization participation",
+contain "Capital" (inverse belongto)*:"Capital",
+contain "Judicial branch" (inverse belongto)*:"Judicial branch",
+contain "National holiday" (inverse belongto)*:"National holiday",
+contain "National symbol" (inverse belongto)*:"National symbol",
+contain "Flag description" (inverse belongto)*:"Flag description",
+];
+create class "transportation" [
+contain "Ports and terminals" (inverse belongto)*:"Ports and terminals",
+contain "Waterways" (inverse belongto)*:"Waterways",
+contain "Airports" (inverse belongto)*:"Airports",
+contain "Roadways" (inverse belongto)*:"Roadways",
+contain "Merchant marine" (inverse belongto)*:"Merchant marine",
+contain "Railways" (inverse belongto)*:"Railways",
+contain "Airports - with unpaved runways" (inverse belongto)*:"Airports - with unpaved runways",
+contain "Airports with paved runways" (inverse belongto)*:"Airports with paved runways",
+contain "Pipelines" (inverse belongto)*:"Pipelines",
+contain "Heliports" (inverse belongto)*:"Heliports",
+];
+create class "military" [
+contain "Manpower fit for military service" (inverse belongto)*:"Manpower fit for military service",
+contain "Military expenditures" (inverse belongto)*:"Military expenditures",
+contain "Manpower reaching militarily significant age annually" (inverse belongto)*:"Manpower reaching militarily significant age annually",
+contain "Manpower available for military service" (inverse belongto)*:"Manpower available for military service",
+contain "Military service age and obligation" (inverse belongto)*:"Military service age and obligation",
+contain "Military branches" (inverse belongto)*:"Military branches",
+];
+create class "energy" [
+contain "Electricity - from fossil fuels" (inverse belongto)*:"Electricity - from fossil fuels",
+contain "Electricity - production" (inverse belongto)*:"Electricity - production",
+contain "Electricity - from other renewable sources" (inverse belongto)*:"Electricity - from other renewable sources",
+contain "Refined petroleum products - production" (inverse belongto)*:"Refined petroleum products - production",
+contain "Crude oil - proved reserves" (inverse belongto)*:"Crude oil - proved reserves",
+contain "Refined petroleum products - consumption" (inverse belongto)*:"Refined petroleum products - consumption",
+contain "Natural gas - exports" (inverse belongto)*:"Natural gas - exports",
+contain "Carbon dioxide emissions from consumption of energy" (inverse belongto)*:"Carbon dioxide emissions from consumption of energy",
+contain "Refined petroleum products - imports" (inverse belongto)*:"Refined petroleum products - imports",
+contain "Natural gas - production" (inverse belongto)*:"Natural gas - production",
+contain "Electricity - installed generating capacity" (inverse belongto)*:"Electricity - installed generating capacity",
+contain "Crude oil - production" (inverse belongto)*:"Crude oil - production",
+contain "Electricity - from nuclear fuels" (inverse belongto)*:"Electricity - from nuclear fuels",
+contain "Electricity - consumption" (inverse belongto)*:"Electricity - consumption",
+contain "Natural gas - consumption" (inverse belongto)*:"Natural gas - consumption",
+contain "Natural gas - imports" (inverse belongto)*:"Natural gas - imports",
+contain "Electricity - exports" (inverse belongto)*:"Electricity - exports",
+contain "Electricity - from hydroelectric plants" (inverse belongto)*:"Electricity - from hydroelectric plants",
+contain "Refined petroleum products - exports" (inverse belongto)*:"Refined petroleum products - exports",
+contain "Natural gas - proved reserves" (inverse belongto)*:"Natural gas - proved reserves",
+contain "Electricity - imports" (inverse belongto)*:"Electricity - imports",
+];
+create class "geo" [
+contain "Land boundaries" (inverse belongto)*:"Land boundaries",
+contain "Terrain" (inverse belongto)*:"Terrain",
+contain "Maritime Claims" (inverse belongto)*:"Maritime Claims",
+contain "Elevation extremes" (inverse belongto)*:"Elevation extremes",
+contain "Environment - current issues" (inverse belongto)*:"Environment - current issues",
+contain "Environment - international agreements" (inverse belongto)*:"Environment - international agreements",
+contain "Coastline" (inverse belongto)*:"Coastline",
+contain "Area" (inverse belongto)*:"Area",
+contain "Total renewable water resources" (inverse belongto)*:"Total renewable water resources",
+contain "Area-comparative" (inverse belongto)*:"Area-comparative",
+contain "Freshwater withdrawal (domestic/industrial/agricultural)" (inverse belongto)*:"Freshwater withdrawal (domestic/industrial/agricultural)",
+contain "Climate" (inverse belongto)*:"Climate",
+contain "Geography - note" (inverse belongto)*:"Geography - note",
+contain "Location" (inverse belongto)*:"Location",
+contain "Map Reference" (inverse belongto)*:"Map Reference",
+contain "Land use" (inverse belongto)*:"Land use",
+contain "Natural hazards" (inverse belongto)*:"Natural hazards",
+contain "Irrigated land" (inverse belongto)*:"Irrigated land",
+contain "Geographic Coordinate" (inverse belongto)*:"Geographic Coordinate",
+];
+create class "country"[
+@data*:string,
+];
+create class "background"[
+@data*:string,
+];
+create class "economy" [
+contain "Unemployment rate" (inverse belongto)*:"Unemployment rate",
+contain "Budget" (inverse belongto)*:"Budget",
+contain "Stock of direct foreign investment - at home" (inverse belongto)*:"Stock of direct foreign investment - at home",
+contain "Imports - partners" (inverse belongto)*:"Imports - partners",
+contain "Economy overview" (inverse belongto)*:"Economy overview",
+contain "Gross national saving" (inverse belongto)*:"Gross national saving",
+contain "Exports" (inverse belongto)*:"Exports",
+contain "Current account balance" (inverse belongto)*:"Current account balance",
+contain "Stock of narrow money" (inverse belongto)*:"Stock of narrow money",
+contain "Debt - external" (inverse belongto)*:"Debt - external",
+contain "Industrial production growth rate" (inverse belongto)*:"Industrial production growth rate",
+contain "Fiscal year" (inverse belongto)*:"Fiscal year",
+contain "Exports - partners" (inverse belongto)*:"Exports - partners",
+contain "Market value of publicly traded shares" (inverse belongto)*:"Market value of publicly traded shares",
+contain "Public debt" (inverse belongto)*:"Public debt",
+contain "Inflation rate (consumer prices)" (inverse belongto)*:"Inflation rate (consumer prices)",
+contain "Stock of domestic credit" (inverse belongto)*:"Stock of domestic credit",
+contain "Stock of broad money" (inverse belongto)*:"Stock of broad money",
+contain "Distribution of family income - Gini index" (inverse belongto)*:"Distribution of family income - Gini index",
+contain "GDP - per capita (PPP)" (inverse belongto)*:"GDP - per capita (PPP)",
+contain "GDP (official exchange rate)" (inverse belongto)*:"GDP (official exchange rate)",
+contain "Imports - commodities" (inverse belongto)*:"Imports - commodities",
+contain "Agriculture - products" (inverse belongto)*:"Agriculture - products",
+contain "GDP (purchasing power parity)" (inverse belongto)*:"GDP (purchasing power parity)",
+contain "Taxes and other revenues" (inverse belongto)*:"Taxes and other revenues",
+contain "Commercial bank prime lending rate" (inverse belongto)*:"Commercial bank prime lending rate",
+contain "GDP - real growth rate" (inverse belongto)*:"GDP - real growth rate",
+contain "Reserves of foreign exchange and gold" (inverse belongto)*:"Reserves of foreign exchange and gold",
+contain "Exchange rate" (inverse belongto)*:"Exchange rate",
+contain "Labor force - by occupation" (inverse belongto)*:"Labor force - by occupation",
+contain "Imports" (inverse belongto)*:"Imports",
+contain "Population below poverty line" (inverse belongto)*:"Population below poverty line",
+contain "Household income or consumption by percentage share" (inverse belongto)*:"Household income or consumption by percentage share",
+contain "Budget surplus (+) or deficit (-)" (inverse belongto)*:"Budget surplus (+) or deficit (-)",
+contain "Central bank discount rate" (inverse belongto)*:"Central bank discount rate",
+contain "Labor force" (inverse belongto)*:"Labor force",
+contain "GDP - composition, by sector of origin" (inverse belongto)*:"GDP - composition, by sector of origin",
+contain "Industries" (inverse belongto)*:"Industries",
+contain "Exports - commodities" (inverse belongto)*:"Exports - commodities",
+contain "GDP - composition, by end use" (inverse belongto)*:"GDP - composition, by end use",
+];
+create class "province"[
+@data*:string,
+];
+create class "author"[
+@data*:string,
+];
+create class "communications" [
+contain "Radio broadcast stations" (inverse belongto)*:"Radio broadcast stations",
+contain "Telephones - main lines in use" (inverse belongto)*:"Telephones - main lines in use",
+contain "Internet hosts" (inverse belongto)*:"Internet hosts",
+contain "Telephones - mobile cellular" (inverse belongto)*:"Telephones - mobile cellular",
+contain "Internet country code" (inverse belongto)*:"Internet country code",
+contain "Internet users" (inverse belongto)*:"Internet users",
+contain "Television broadcast stations" (inverse belongto)*:"Television broadcast stations",
+contain "Telephone system" (inverse belongto)*:"Telephone system",
+contain "Broadcast media" (inverse belongto)*:"Broadcast media",
+];
+create class "transnational_issue" [
+contain "Illicit drugs" (inverse belongto)*:"Illicit drugs",
+contain "Refugees and internally displaced persons" (inverse belongto)*:"Refugees and internally displaced persons",
+contain "Trafficking in persons" (inverse belongto)*:"Trafficking in persons",
+contain "Disputes - international" (inverse belongto)*:"Disputes - international",
+];
+create class "PeopleandSociety" [
+contain "Total fertility rate" (inverse belongto)*:"Total fertility rate",
+contain "Languages" (inverse belongto)*:"Languages",
+contain "Infant mortality rate" (inverse belongto)*:"Infant mortality rate",
+contain "Health expenditures" (inverse belongto)*:"Health expenditures",
+contain "Hospital bed density" (inverse belongto)*:"Hospital bed density",
+contain "Obesity - adult prevalence rate" (inverse belongto)*:"Obesity - adult prevalence rate",
+contain "Unemployment, youth ages 15-24" (inverse belongto)*:"Unemployment, youth ages 15-24",
+contain "Ethnic groups" (inverse belongto)*:"Ethnic groups",
+contain "Life expectancy at birth" (inverse belongto)*:"Life expectancy at birth",
+contain "Contraceptive prevalence rate" (inverse belongto)*:"Contraceptive prevalence rate",
+contain "Drinking water source" (inverse belongto)*:"Drinking water source",
+contain "Mother mean age at first birth" (inverse belongto)*:"Mother mean age at first birth",
+contain "Birth rate" (inverse belongto)*:"Birth rate",
+contain "HIV/AIDS - deaths" (inverse belongto)*:"HIV/AIDS - deaths",
+contain "Religions" (inverse belongto)*:"Religions",
+contain "HIV/AIDS - people living with HIV/AIDS" (inverse belongto)*:"HIV/AIDS - people living with HIV/AIDS",
+contain "Physician density" (inverse belongto)*:"Physician density",
+contain "Death rate" (inverse belongto)*:"Death rate",
+contain "Net migration rate" (inverse belongto)*:"Net migration rate",
+contain "Major urban areas - population" (inverse belongto)*:"Major urban areas - population",
+contain "Median age" (inverse belongto)*:"Median age",
+contain "Nationality" (inverse belongto)*:"Nationality",
+contain "Sex ratio" (inverse belongto)*:"Sex ratio",
+contain "Urbanization" (inverse belongto)*:"Urbanization",
+contain "HIV/AIDS - adult prevalence rate" (inverse belongto)*:"HIV/AIDS - adult prevalence rate",
+contain "School life expectancy (primary to tertiary education)" (inverse belongto)*:"School life expectancy (primary to tertiary education)",
+contain "Children under the age of 5 years underweight" (inverse belongto)*:"Children under the age of 5 years underweight",
+contain "Sanitation facility access" (inverse belongto)*:"Sanitation facility access",
+contain "Dependency ratios" (inverse belongto)*:"Dependency ratios",
+contain "Population growth rate" (inverse belongto)*:"Population growth rate",
+contain "Populations" (inverse belongto)*:"Populations",
+contain "Education expenditures" (inverse belongto)*:"Education expenditures",
+contain "Age structure" (inverse belongto)*:"Age structure",
+contain "Maternal mortality rate" (inverse belongto)*:"Maternal mortality rate",
+];
+create class "Heliports" [
+@data*:string
+];
+create class "Airports" [
+@data*:string
+];
+create class "Ports and terminals" [
+@data*:string
+];
+create class "Pipelines" [
+@data*:string
+];
+create class "Waterways" [
+@data*:string
+];
+create class "Dependent areas" [
+@data*:string
+];
+create class "Administrative divisions" [
+@data*:string
+];
+create class "National holiday" [
+@data*:string
+];
+create class "Government type" [
+@data*:string
+];
+create class "Flag description" [
+@data*:string
+];
+create class "International law organization participation" [
+@data*:string
+];
+create class "National symbol" [
+@data*:string
+];
+create class "Political parties and leaders" [
+@data*:string
+];
+create class "Independence" [
+@data*:string
+];
+create class "Constitution" [
+@data*:string
+];
+create class "Suffrage" [
+@data*:string
+];
+create class "International organization participation" [
+@data*:string
+];
+create class "Legal system" [
+@data*:string
+];
+create class "Refined petroleum products - exports" [
+@data*:string
+];
+create class "Natural gas - exports" [
+@data*:string
+];
+create class "Electricity - from nuclear fuels" [
+@data*:string
+];
+create class "Crude oil - proved reserves" [
+@data*:string
+];
+create class "Electricity - exports" [
+@data*:string
+];
+create class "Refined petroleum products - consumption" [
+@data*:string
+];
+create class "Natural gas - proved reserves" [
+@data*:string
+];
+create class "Electricity - consumption" [
+@data*:string
+];
+create class "Electricity - from other renewable sources" [
+@data*:string
+];
+create class "Refined petroleum products - imports" [
+@data*:string
+];
+create class "Electricity - from fossil fuels" [
+@data*:string
+];
+create class "Electricity - from hydroelectric plants" [
+@data*:string
+];
+create class "Electricity - installed generating capacity" [
+@data*:string
+];
+create class "Refined petroleum products - production" [
+@data*:string
+];
+create class "Natural gas - consumption" [
+@data*:string
+];
+create class "Electricity - production" [
+@data*:string
+];
+create class "Natural gas - imports" [
+@data*:string
+];
+create class "Carbon dioxide emissions from consumption of energy" [
+@data*:string
+];
+create class "Electricity - imports" [
+@data*:string
+];
+create class "Natural gas - production" [
+@data*:string
+];
+create class "Crude oil - production" [
+@data*:string
+];
+create class "Military expenditures" [
+@data*:string
+];
+create class "Military service age and obligation" [
+@data*:string
+];
+create class "Military branches" [
+@data*:string
+];
+create class "Terrain" [
+@data*:string
+];
+create class "Natural hazards" [
+@data*:string
+];
+create class "Geographic Coordinate" [
+@data*:string
+];
+create class "Geography - note" [
+@data*:string
+];
+create class "Irrigated land" [
+@data*:string
+];
+create class "Map Reference" [
+@data*:string
+];
+create class "Location" [
+@data*:string
+];
+create class "Area-comparative" [
+@data*:string
+];
+create class "Total renewable water resources" [
+@data*:string
+];
+create class "Coastline" [
+@data*:string
+];
+create class "Climate" [
+@data*:string
+];
+create class "Environment - current issues" [
+@data*:string
+];
+create class "Imports" [
+@data*:string
+];
+create class "Unemployment rate" [
+@data*:string
+];
+create class "Industries" [
+@data*:string
+];
+create class "Agriculture - products" [
+@data*:string
+];
+create class "Budget surplus (+) or deficit (-)" [
+@data*:string
+];
+create class "Commercial bank prime lending rate" [
+@data*:string
+];
+create class "Current account balance" [
+@data*:string
+];
+create class "Exports - commodities" [
+@data*:string
+];
+create class "Market value of publicly traded shares" [
+@data*:string
+];
+create class "Public debt" [
+@data*:string
+];
+create class "Exchange rate" [
+@data*:string
+];
+create class "Economy overview" [
+@data*:string
+];
+create class "Exports - partners" [
+@data*:string
+];
+create class "Gross national saving" [
+@data*:string
+];
+create class "Population below poverty line" [
+@data*:string
+];
+create class "Stock of narrow money" [
+@data*:string
+];
+create class "Inflation rate (consumer prices)" [
+@data*:string
+];
+create class "Debt - external" [
+@data*:string
+];
+create class "Reserves of foreign exchange and gold" [
+@data*:string
+];
+create class "Stock of domestic credit" [
+@data*:string
+];
+create class "Distribution of family income - Gini index" [
+@data*:string
+];
+create class "GDP - real growth rate" [
+@data*:string
+];
+create class "Fiscal year" [
+@data*:string
+];
+create class "Imports - commodities" [
+@data*:string
+];
+create class "Taxes and other revenues" [
+@data*:string
+];
+create class "Industrial production growth rate" [
+@data*:string
+];
+create class "Exports" [
+@data*:string
+];
+create class "Imports - partners" [
+@data*:string
+];
+create class "Stock of broad money" [
+@data*:string
+];
+create class "GDP (official exchange rate)" [
+@data*:string
+];
+create class "GDP - per capita (PPP)" [
+@data*:string
+];
+create class "GDP (purchasing power parity)" [
+@data*:string
+];
+create class "Central bank discount rate" [
+@data*:string
+];
+create class "Stock of direct foreign investment - at home" [
+@data*:string
+];
+create class "Labor force" [
+@data*:string
+];
+create class "Illicit drugs" [
+@data*:string
+];
+create class "Disputes - international" [
+@data*:string
+];
+create class "Mother mean age at first birth" [
+@data*:string
+];
+create class "HIV/AIDS - people living with HIV/AIDS" [
+@data*:string
+];
+create class "Obesity - adult prevalence rate" [
+@data*:string
+];
+create class "Physician density" [
+@data*:string
+];
+create class "HIV/AIDS - deaths" [
+@data*:string
+];
+create class "Maternal mortality rate" [
+@data*:string
+];
+create class "Religions" [
+@data*:string
+];
+create class "Contraceptive prevalence rate" [
+@data*:string
+];
+create class "Birth rate" [
+@data*:string
+];
+create class "Population growth rate" [
+@data*:string
+];
+create class "Languages" [
+@data*:string
+];
+create class "Children under the age of 5 years underweight" [
+@data*:string
+];
+create class "Ethnic groups" [
+@data*:string
+];
+create class "Health expenditures" [
+@data*:string
+];
+create class "Net migration rate" [
+@data*:string
+];
+create class "HIV/AIDS - adult prevalence rate" [
+@data*:string
+];
+create class "Hospital bed density" [
+@data*:string
+];
+create class "Major urban areas - population" [
+@data*:string
+];
+create class "Total fertility rate" [
+@data*:string
+];
+create class "Death rate" [
+@data*:string
+];
+create class "Education expenditures" [
+@data*:string
+];
+create class "Broadcast media" [
+@data*:string
+];
+create class "Telephones - mobile cellular" [
+@data*:string
+];
+create class "Television broadcast stations" [
+@data*:string
+];
+create class "Internet country code" [
+@data*:string
+];
+create class "Radio broadcast stations" [
+@data*:string
+];
+create class "Internet users" [
+@data*:string
+];
+create class "Internet hosts" [
+@data*:string
+];
+create class "Telephones - main lines in use" [
+@data*:string
+];
+
+
+create class "Country name" [
+contain  "conventional short form" (inverse belongto) *:"conventional short form",
+contain  "local short form" (inverse belongto) *:"local short form",
+contain  "local long form" (inverse belongto) *:"local long form",
+contain  "conventional long form" (inverse belongto) *:"conventional long form",
+contain  "abbreviation" (inverse belongto) *:"abbreviation",
+contain  "former" (inverse belongto) *:"former",
+];
+create class "Executive branch" [
+contain  "head of government" (inverse belongto) *:"head of government",
+contain  "chief of state" (inverse belongto) *:"chief of state",
+contain  "election results" (inverse belongto) *:"election results",
+contain  "cabinet" (inverse belongto) *:"cabinet",
+contain  "elections" (inverse belongto) *:"elections",
+];
+create class "National anthem" [
+contain  "name" (inverse belongto) *:"name",
+contain  "lyrics/music" (inverse belongto) *:"lyrics/music",
+contain  "note" (inverse belongto) *:"note",
+contain  "mp3" (inverse belongto) *:"mp3",
+];
+create class "Judicial branch" [
+contain  "highest court" (inverse belongto) *:"highest court",
+contain  "judge selection and term of office" (inverse belongto) *:"judge selection and term of office",
+contain  "subordinate court" (inverse belongto) *:"subordinate court",
+];
+create class "Capital" [
+contain  "time difference" (inverse belongto) *:"time difference",
+contain  "geographic coordinates" (inverse belongto) *:"geographic coordinates",
+contain  "daylight saving time" (inverse belongto) *:"daylight saving time",
+contain  "note" (inverse belongto) *:"note",
+contain  "name" (inverse belongto) *:"name",
+];
+create class "Legislative branch" [
+contain  "description" (inverse belongto) *:"description",
+contain  "election results" (inverse belongto) *:"election results",
+contain  "elections" (inverse belongto) *:"elections",
+contain  "cabinet" (inverse belongto) *:"cabinet",
+];
+create class "Telephone system" [
+contain  "domestic" (inverse belongto) *:"domestic",
+contain  "international" (inverse belongto) *:"international",
+contain  "general assessment" (inverse belongto) *:"general assessment",
+];
+create class "Household income or consumption by percentage share" [
+contain  "lowest 10%" (inverse belongto) *:"lowest 10%",
+contain  "highest 10%" (inverse belongto) *:"highest 10%",
+];
+create class "GDP - composition, by sector of origin" [
+contain  "industry" (inverse belongto) *:"industry",
+contain  "agriculture" (inverse belongto) *:"agriculture",
+contain  "services" (inverse belongto) *:"services",
+];
+create class "GDP - composition, by end use" [
+contain  "household consumption" (inverse belongto) *:"household consumption",
+contain  "investment in inventories" (inverse belongto) *:"investment in inventories",
+contain  "government consumption" (inverse belongto) *:"government consumption",
+contain  "exports of goods and services" (inverse belongto) *:"exports of goods and services",
+contain  "imports of goods and services" (inverse belongto) *:"imports of goods and services",
+contain  "investment in fixed capital" (inverse belongto) *:"investment in fixed capital",
+];
+create class "Budget" [
+contain  "revenues" (inverse belongto) *:"revenues",
+contain  "expenditures" (inverse belongto) *:"expenditures",
+];
+create class "Labor force - by occupation" [
+contain  "government" (inverse belongto) *:"government",
+contain  "industry" (inverse belongto) *:"industry",
+contain  "farming" (inverse belongto) *:"farming",
+contain  "trade" (inverse belongto) *:"trade",
+contain  "construction and public works" (inverse belongto) *:"construction and public works",
+contain  "sales and office" (inverse belongto) *:"sales and office",
+contain  "farming, forestry, and fishing" (inverse belongto) *:"farming, forestry, and fishing",
+contain  "agriculture" (inverse belongto) *:"agriculture",
+contain  "managerial, professional, and technical" (inverse belongto) *:"managerial, professional, and technical",
+contain  "other services" (inverse belongto) *:"other services",
+contain  "manufacturing, extraction, transportation, and crafts" (inverse belongto) *:"manufacturing, extraction, transportation, and crafts",
+contain  "services" (inverse belongto) *:"services",
+];
+create class "Manpower available for military service" [
+contain  "males age 16-49" (inverse belongto) *:"males age 16-49",
+contain  "females age 16-49" (inverse belongto) *:"females age 16-49",
+];
+create class "Manpower reaching militarily significant age annually" [
+contain  "males" (inverse belongto) *:"males",
+contain  "females" (inverse belongto) *:"females",
+];
+create class "Manpower fit for military service" [
+contain  "males age 16-49" (inverse belongto) *:"males age 16-49",
+contain  "females age 16-49" (inverse belongto) *:"females age 16-49",
+];
+create class "Environment - international agreements" [
+contain  "party to" (inverse belongto) *:"party to",
+contain  "signed, but not ratified" (inverse belongto) *:"signed, but not ratified",
+];
+create class "Area" [
+contain  "country comparison to the world:" (inverse belongto) *:"country comparison to the world:",
+contain  "note" (inverse belongto) *:"note",
+contain  "total" (inverse belongto) *:"total",
+contain  "water" (inverse belongto) *:"water",
+contain  "land" (inverse belongto) *:"land",
+];
+create class "Freshwater withdrawal (domestic/industrial/agricultural)" [
+contain  "per capita" (inverse belongto) *:"per capita",
+contain  "total" (inverse belongto) *:"total",
+];
+create class "Elevation extremes" [
+contain  "highest point" (inverse belongto) *:"highest point",
+contain  "lowest point" (inverse belongto) *:"lowest point",
+];
+create class "Maritime Claims" [
+contain  "contiguous zone" (inverse belongto) *:"contiguous zone",
+contain  "exclusive fishing zone" (inverse belongto) *:"exclusive fishing zone",
+contain  "continental shelf" (inverse belongto) *:"continental shelf",
+contain  "exclusive economic zone" (inverse belongto) *:"exclusive economic zone",
+contain  "territorial sea" (inverse belongto) *:"territorial sea",
+];
+create class "Land use" [
+contain  "arable land" (inverse belongto) *:"arable land",
+contain  "other" (inverse belongto) *:"other",
+contain  "permanent crops" (inverse belongto) *:"permanent crops",
+];
+create class "Land boundaries" [
+contain  "border countries" (inverse belongto) *:"border countries",
+contain  "note" (inverse belongto) *:"note",
+contain  "total" (inverse belongto) *:"total",
+];
+create class "Airports - with unpaved runways" [
+contain  "under 914 m" (inverse belongto) *:"under 914 m",
+contain  "1,524 to 2,437 m" (inverse belongto) *:"1,524 to 2,437 m",
+contain  "914 to 1,523 m" (inverse belongto) *:"914 to 1,523 m",
+contain  "total" (inverse belongto) *:"total",
+contain  "over 3,047 m" (inverse belongto) *:"over 3,047 m",
+contain  "2,438 to 3,047 m" (inverse belongto) *:"2,438 to 3,047 m",
+];
+create class "Airports with paved runways" [
+contain  "under 914 m" (inverse belongto) *:"under 914 m",
+contain  "1,524 to 2,437 m" (inverse belongto) *:"1,524 to 2,437 m",
+contain  "914 to 1,523 m" (inverse belongto) *:"914 to 1,523 m",
+contain  "total" (inverse belongto) *:"total",
+contain  "over 3,047 m" (inverse belongto) *:"over 3,047 m",
+contain  "2,438 to 3,047 m" (inverse belongto) *:"2,438 to 3,047 m",
+];
+create class "Railways" [
+contain  "broad gauge" (inverse belongto) *:"broad gauge",
+contain  "narrow gauge" (inverse belongto) *:"narrow gauge",
+contain  "standard gauge" (inverse belongto) *:"standard gauge",
+contain  "total" (inverse belongto) *:"total",
+];
+create class "Merchant marine" [
+contain  "foreign-owned" (inverse belongto) *:"foreign-owned",
+contain  "country comparison to the world" (inverse belongto) *:"country comparison to the world",
+contain  "total" (inverse belongto) *:"total",
+contain  "by type" (inverse belongto) *:"by type",
+contain  "registered in other countries" (inverse belongto) *:"registered in other countries",
+];
+create class "Roadways" [
+contain  "unpaved" (inverse belongto) *:"unpaved",
+contain  "total" (inverse belongto) *:"total",
+contain  "paved" (inverse belongto) *:"paved",
+];
+create class "Trafficking in persons" [
+contain  "current situation" (inverse belongto) *:"current situation",
+contain  "tier rating" (inverse belongto) *:"tier rating",
+];
+create class "Refugees and internally displaced persons" [
+contain  "stateless" (inverse belongto) *:"stateless",
+contain  "refugees" (inverse belongto) *:"refugees",
+contain  "IDPs" (inverse belongto) *:"IDPs",
+];
+create class "Unemployment, youth ages 15-24" [
+contain  "male" (inverse belongto) *:"male",
+contain  "total" (inverse belongto) *:"total",
+contain  "female" (inverse belongto) *:"female",
+];
+create class "Drinking water source" [
+contain  "unimproved" (inverse belongto) *:"unimproved",
+contain  "improved" (inverse belongto) *:"improved",
+];
+create class "Sex ratio" [
+contain  "65 years and over" (inverse belongto) *:"65 years and over",
+contain  "total population" (inverse belongto) *:"total population",
+contain  "25-54 years" (inverse belongto) *:"25-54 years",
+contain  "55-64 years" (inverse belongto) *:"55-64 years",
+contain  "at birth" (inverse belongto) *:"at birth",
+contain  "15-24 years" (inverse belongto) *:"15-24 years",
+contain  "0-14 years" (inverse belongto) *:"0-14 years",
+];
+create class "School life expectancy (primary to tertiary education)" [
+contain  "male" (inverse belongto) *:"male",
+contain  "total" (inverse belongto) *:"total",
+contain  "female" (inverse belongto) *:"female",
+];
+create class "Infant mortality rate" [
+contain  "male" (inverse belongto) *:"male",
+contain  "country comparison to the world" (inverse belongto) *:"country comparison to the world",
+contain  "total" (inverse belongto) *:"total",
+contain  "female" (inverse belongto) *:"female",
+];
+create class "Nationality" [
+contain  "adjective" (inverse belongto) *:"adjective",
+contain  "noun" (inverse belongto) *:"noun",
+];
+create class "Urbanization" [
+contain  "urban population" (inverse belongto) *:"urban population",
+contain  "rate of urbanization" (inverse belongto) *:"rate of urbanization",
+];
+create class "Life expectancy at birth" [
+contain  "male" (inverse belongto) *:"male",
+contain  "country comparison to the world" (inverse belongto) *:"country comparison to the world",
+contain  "female" (inverse belongto) *:"female",
+contain  "total population" (inverse belongto) *:"total population",
+];
+create class "Sanitation facility access" [
+contain  "unimproved" (inverse belongto) *:"unimproved",
+contain  "improved" (inverse belongto) *:"improved",
+];
+create class "Dependency ratios" [
+contain  "youth dependency ratio" (inverse belongto) *:"youth dependency ratio",
+contain  "elderly dependency ratio" (inverse belongto) *:"elderly dependency ratio",
+contain  "potential support ratio" (inverse belongto) *:"potential support ratio",
+contain  "total dependency ratio" (inverse belongto) *:"total dependency ratio",
+];
+create class "Age structure" [
+contain  "55-64 years" (inverse belongto) *:"55-64 years",
+contain  "15-24 years" (inverse belongto) *:"15-24 years",
+contain  "0-14 years" (inverse belongto) *:"0-14 years",
+contain  "25-54 years:" (inverse belongto) *:"25-54 years:",
+];
+create class "Median age" [
+contain  "male" (inverse belongto) *:"male",
+contain  "total" (inverse belongto) *:"total",
+contain  "female" (inverse belongto) *:"female",
+];
+create class "Populations" [
+contain  "amount" (inverse belongto) *:"amount",
+contain  "country comparison to the world" (inverse belongto) *:"country comparison to the world",
+contain  "note" (inverse belongto) *:"note",
+];
+
+create class "general assessment" [
+@data*:string
+];
+create class "international" [
+@data*:string
+];
+create class "domestic" [
+@data*:string
+];
+create class "highest point" [
+@data*:string
+];
+create class "lowest point" [
+@data*:string
+];
+create class "border countries" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "note" [
+@data*:string
+];
+create class "arable land" [
+@data*:string
+];
+create class "permanent crops" [
+@data*:string
+];
+create class "other" [
+@data*:string
+];
+create class "exclusive fishing zone" [
+@data*:string
+];
+create class "exclusive economic zone" [
+@data*:string
+];
+create class "territorial sea" [
+@data*:string
+];
+create class "contiguous zone" [
+@data*:string
+];
+create class "continental shelf" [
+@data*:string
+];
+create class "country comparison to the world:" [
+@data*:string
+];
+create class "land" [
+@data*:string
+];
+create class "water" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "note" [
+@data*:string
+];
+create class "per capita" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "party to" [
+@data*:string
+];
+create class "signed, but not ratified" [
+@data*:string
+];
+create class "IDPs" [
+@data*:string
+];
+create class "stateless" [
+@data*:string
+];
+create class "refugees" [
+@data*:string
+];
+create class "tier rating" [
+@data*:string
+];
+create class "current situation" [
+@data*:string
+];
+create class "unpaved" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "paved" [
+@data*:string
+];
+create class "over 3,047 m" [
+@data*:string
+];
+create class "1,524 to 2,437 m" [
+@data*:string
+];
+create class "914 to 1,523 m" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "2,438 to 3,047 m" [
+@data*:string
+];
+create class "under 914 m" [
+@data*:string
+];
+create class "over 3,047 m" [
+@data*:string
+];
+create class "1,524 to 2,437 m" [
+@data*:string
+];
+create class "914 to 1,523 m" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "2,438 to 3,047 m" [
+@data*:string
+];
+create class "under 914 m" [
+@data*:string
+];
+create class "broad gauge" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "narrow gauge" [
+@data*:string
+];
+create class "standard gauge" [
+@data*:string
+];
+create class "registered in other countries" [
+@data*:string
+];
+create class "country comparison to the world" [
+@data*:string
+];
+create class "foreign-owned" [
+@data*:string
+];
+create class "by type" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "female" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "male" [
+@data*:string
+];
+create class "country comparison to the world" [
+@data*:string
+];
+create class "amount" [
+@data*:string
+];
+create class "note" [
+@data*:string
+];
+create class "female" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "male" [
+@data*:string
+];
+create class "urban population" [
+@data*:string
+];
+create class "rate of urbanization" [
+@data*:string
+];
+create class "total population" [
+@data*:string
+];
+create class "female" [
+@data*:string
+];
+create class "country comparison to the world" [
+@data*:string
+];
+create class "male" [
+@data*:string
+];
+create class "at birth" [
+@data*:string
+];
+create class "65 years and over" [
+@data*:string
+];
+create class "15-24 years" [
+@data*:string
+];
+create class "0-14 years" [
+@data*:string
+];
+create class "total population" [
+@data*:string
+];
+create class "55-64 years" [
+@data*:string
+];
+create class "25-54 years" [
+@data*:string
+];
+create class "female" [
+@data*:string
+];
+create class "country comparison to the world" [
+@data*:string
+];
+create class "male" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "adjective" [
+@data*:string
+];
+create class "noun" [
+@data*:string
+];
+create class "unimproved" [
+@data*:string
+];
+create class "improved" [
+@data*:string
+];
+create class "unimproved" [
+@data*:string
+];
+create class "improved" [
+@data*:string
+];
+create class "25-54 years:" [
+@data*:string
+];
+create class "55-64 years" [
+@data*:string
+];
+create class "0-14 years" [
+@data*:string
+];
+create class "15-24 years" [
+@data*:string
+];
+create class "potential support ratio" [
+@data*:string
+];
+create class "total dependency ratio" [
+@data*:string
+];
+create class "elderly dependency ratio" [
+@data*:string
+];
+create class "youth dependency ratio" [
+@data*:string
+];
+create class "female" [
+@data*:string
+];
+create class "total" [
+@data*:string
+];
+create class "male" [
+@data*:string
+];
+create class "mp3" [
+@data*:string
+];
+create class "lyrics/music" [
+@data*:string
+];
+create class "name" [
+@data*:string
+];
+create class "note" [
+@data*:string
+];
+create class "elections" [
+@data*:string
+];
+create class "description" [
+@data*:string
+];
+create class "election results" [
+@data*:string
+];
+create class "cabinet" [
+@data*:string
+];
+create class "elections" [
+@data*:string
+];
+create class "chief of state" [
+@data*:string
+];
+create class "cabinet" [
+@data*:string
+];
+create class "election results" [
+@data*:string
+];
+create class "head of government" [
+@data*:string
+];
+create class "daylight saving time" [
+@data*:string
+];
+create class "geographic coordinates" [
+@data*:string
+];
+create class "time difference" [
+@data*:string
+];
+create class "name" [
+@data*:string
+];
+create class "note" [
+@data*:string
+];
+create class "judge selection and term of office" [
+@data*:string
+];
+create class "highest court" [
+@data*:string
+];
+create class "subordinate court" [
+@data*:string
+];
+create class "conventional short form" [
+@data*:string
+];
+create class "conventional long form" [
+@data*:string
+];
+create class "local short form" [
+@data*:string
+];
+create class "abbreviation" [
+@data*:string
+];
+create class "former" [
+@data*:string
+];
+create class "local long form" [
+@data*:string
+];
+create class "highest 10%" [
+@data*:string
+];
+create class "lowest 10%" [
+@data*:string
+];
+create class "imports of goods and services" [
+@data*:string
+];
+create class "exports of goods and services" [
+@data*:string
+];
+create class "household consumption" [
+@data*:string
+];
+create class "investment in inventories" [
+@data*:string
+];
+create class "government consumption" [
+@data*:string
+];
+create class "investment in fixed capital" [
+@data*:string
+];
+create class "expenditures" [
+@data*:string
+];
+create class "revenues" [
+@data*:string
+];
+create class "services" [
+@data*:string
+];
+create class "industry" [
+@data*:string
+];
+create class "agriculture" [
+@data*:string
+];
+create class "trade" [
+@data*:string
+];
+create class "agriculture" [
+@data*:string
+];
+create class "farming" [
+@data*:string
+];
+create class "construction and public works" [
+@data*:string
+];
+create class "services" [
+@data*:string
+];
+create class "farming, forestry, and fishing" [
+@data*:string
+];
+create class "other services" [
+@data*:string
+];
+create class "government" [
+@data*:string
+];
+create class "sales and office" [
+@data*:string
+];
+create class "managerial, professional, and technical" [
+@data*:string
+];
+create class "manufacturing, extraction, transportation, and crafts" [
+@data*:string
+];
+create class "industry" [
+@data*:string
+];
+create class "males age 16-49" [
+@data*:string
+];
+create class "females age 16-49" [
+@data*:string
+];
+create class "females" [
+@data*:string
+];
+create class "males" [
+@data*:string
+];
+create class "males age 16-49" [
+@data*:string
+];
+create class "females age 16-49" [
+@data*:string
+];

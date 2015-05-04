@@ -1,0 +1,4 @@
+create class CIAFACTBOOK subsume {"Countries on the earth"}[
+@"Insert time":date,
+@name:string
+];
